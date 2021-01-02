@@ -40,6 +40,7 @@ body {
     margin-top: 30px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .hader .nav input {
@@ -110,13 +111,7 @@ input[type=radio]:checked~label {
     grid-area: 2 / 4 / 3 / 5;
 }
 
-.div9 {
-    grid-area: 1 / 1 / 2 / 2;
-}
 
-.div10 {
-    grid-area: 1 / 1 / 2 / 2;
-}
 
 .parent>div {
     width: 100%;
@@ -154,8 +149,9 @@ input[type=radio]:checked~label {
 
 .parent .text>p {
     width: 80%;
+    
     position: absolute;
-    top: 35%;
+    top: 25%;
     left: 50%;
     transform: translateX(-50%);
     font-size: 1.2rem;
@@ -169,12 +165,37 @@ input[type=radio]:checked~label {
     padding: 10px 20px;
 }
 
-@media (max-width: 670px) {
-    .hader .nav label {
-        width: 80px;
-        font-size: 1rem;
-        padding: 5px 10px;
-    }
+@media (max-width: 720px) {
+   
+    .parent{
+        
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            gap: 0px 0px;
+            grid-template-areas:
+              "div1 div2"
+              "div3 div4"
+              "div5 div6"
+              "div7 div8";
+          }
+          
+          .div1 { grid-area: div1; }
+          
+          .div2 { grid-area: div2; }
+          
+          .div3 { grid-area: div3; }
+          
+          .div4 { grid-area: div4; }
+          
+          .div5 { grid-area: div5; }
+          
+          .div6 { grid-area: div6; }
+          
+          .div7 { grid-area: div7; }
+          
+          .div8 { grid-area: div8; }
+          
 }
 .logo{
     position: absolute;
@@ -183,3 +204,9 @@ input[type=radio]:checked~label {
     background-color: white;
     border-radius: 10px;
 }
+
+
+   
+
+    
+    
